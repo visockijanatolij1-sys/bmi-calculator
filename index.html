@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32 (1).png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-body">
+              <div class="logo">
+                <img src="./images/logo.svg" alt="BMI Calculator" />
+              </div>
+              <div class="hero-block">
+                <div class="hero-content">
+                  <h1 class="content-hero_title">Body Mass Index Calculator</h1>
+                  <p class="content-hero_text">
+                    Better understand your weight in relation to your height
+                    using our body mass index (BM) calculator. While BMI is not
+                    the sole determinant of a healthy weight, it offers a
+                    valuable starting point to evaluate your overall health and
+                    well-being.
+                  </p>
+                </div>
+                <div class="calculator-body">
+                  <h2 class="calc-title">Enter your details below</h2>
+                  <div class="calc-units">
+                    <fieldset>
+                      <!-- <legend>Enter your details below</legend> -->
+
+                      <label class="units-label">
+                        <input
+                          type="radio"
+                          name="units"
+                          value="metric"
+                          checked
+                        />
+                        <span class="units-label_text">Metric</span>
+                      </label>
+
+                      <label class="units-label">
+                        <input type="radio" name="units" value="imperial" />
+                        <span class="units-label_text">Imperial</span>
+                      </label>
+                    </fieldset>
+                  </div>
+                  <div class="calc-inputs">
+                    <label class="input-group">
+                      <span class="input-label">Height</span>
+
+                      <span class="input-wrapper">
+                        <input type="number" name="height" placeholder="0" />
+                        <span class="input-unit">cm</span>
+                      </span>
+                    </label>
+                    <label class="input-group">
+                      <span class="input-label">Weight</span>
+
+                      <span class="input-wrapper">
+                        <input type="number" name="weight" placeholder="0" />
+                        <span class="input-unit">kg</span>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="calc-results">
+                    <h2 class="calc-results_title">Welcome!</h2>
+                    <p class="calc-results_text">
+                      Enter your height and weight and you’ll see your BMI
+                      result here
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

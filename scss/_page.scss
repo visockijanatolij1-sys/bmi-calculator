@@ -1,0 +1,235 @@
+@use "variables";
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero {
+  padding-top: 88px;
+  padding-bottom: 88px;
+  min-height: 737px;
+  position: relative;
+  z-index: 10;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 69%;
+    min-height: 737px;
+    background: linear-gradient(to right, #d6fcfe67, #d6e6fe93);
+    z-index: -1;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+  }
+}
+
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.logo {
+  width: 64px;
+  height: 64px;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+}
+.hero-block {
+  max-width: 1160px;
+  min-height: 440px;
+  display: flex;
+  align-items: start;
+  gap: 32px;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  max-width: 564px;
+  min-height: 412px;
+}
+.content-hero_title {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: -5%;
+  font-weight: 600;
+  color: variables.$blue900;
+}
+
+.calculator-body {
+  flex: 0 1 564px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 440px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 19px 0px #33333321;
+  background-color: variables.$white;
+}
+
+.calc-units > fieldset {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.units-label {
+  width: 238px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.units-label_text {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: variables.$blue900;
+  font-weight: 600;
+}
+input[type="radio"] {
+  appearance: none;
+
+  width: 31px;
+  height: 31px;
+  border: 1px solid variables.$grey500;
+  border-radius: 50%;
+  position: relative;
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 31px;
+    height: 31px;
+    background-color: variables.$blue100;
+    border-radius: 50%;
+    border: 1px solid variables.$blue100;
+  }
+  &:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-54%, -54%);
+    width: 15px;
+    height: 15px;
+    background-color: variables.$blue500;
+    border-radius: 50%;
+    z-index: 10;
+    // border: 1px solid variables.$blue100;
+  }
+}
+.calc-inputs {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 90px;
+}
+.input-group {
+  flex: 0 1 238px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input-label {
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: variables.$grey500;
+}
+.input-wrapper {
+  position: relative;
+}
+.input-unit {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-wrapper > input {
+  width: 100%;
+  border: 1px solid variables.$grey500;
+  padding: 16px 24px;
+  border-radius: 15px;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -5%;
+  font-weight: 600;
+  color: variables.$blue900;
+  &::placeholder {
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -5%;
+    font-weight: 600;
+    color: variables.$blue900;
+  }
+}
+.calc-results {
+  width: 100%;
+  min-height: 130px;
+  background-color: variables.$blue500;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 10px 100px 100px 10px;
+}
+.calc-results_title {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -5%;
+  font-weight: 600;
+  color: variables.$white;
+}
+.calc-results_text {
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: variables.$white;
+}
+
+@media (max-width: 1023.98px) {
+  .hero::before {
+    width: 100%;
+  }
+  .hero-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .hero-block {
+    flex-direction: column;
+    max-width: none;
+    min-height: auto;
+    width: 100%;
+  }
+  .hero-content {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 0;
+    min-height: auto;
+  }
+  .calculator-body {
+    flex: none;
+    max-width: 686px;
+    margin: 0 auto;
+  }
+}
